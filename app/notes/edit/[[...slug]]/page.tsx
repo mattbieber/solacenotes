@@ -23,7 +23,7 @@ import { saveNote, fetchNote } from '../../actions/note-action'
 import type { FetchFailure } from '../../actions/note-action'
 import { trueCharCount } from '@/lib/true-character-count'
 import { useForm } from 'react-hook-form'
-import { v4 as uuid } from 'uuid'
+import { nanoid } from 'nanoid'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 export default function Edit({ params }: { params: { slug: string } }) {
@@ -52,7 +52,7 @@ export default function Edit({ params }: { params: { slug: string } }) {
                 content: '',
                 contentFormatted: '',
 
-                slug: uuid(),
+                slug: nanoid(),
                 title: '',
                 userId: id,
             }
