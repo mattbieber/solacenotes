@@ -12,7 +12,7 @@ import type { Note } from '@/data/models'
 export default function DashboardPage() {
     const [needNotes, setNeedNotes] = useState<boolean>(false)
     const [userNotes, setUserNotes] = useState<Note[]>([])
-
+    const [working, setIsWorking] = useState(true)
     useEffect(() => {
         const getNotes = async () => {
             const result = await fetchNotes()
@@ -21,6 +21,7 @@ export default function DashboardPage() {
                 setUserNotes(result.notes)
             }
             setNeedNotes(false)
+            setIsWorking(false)
         }
 
         if (needNotes) {
@@ -34,21 +35,22 @@ export default function DashboardPage() {
         const doDelete = async () => {
             const result = await deleteNote(slug)
             setNeedNotes(true)
+            setIsWorking(true)
         }
         doDelete()
     }
-    
+
     return (
         <div className="mx-auto max-w-4xl relative">
             <h1 className="mt-20 font-extrabold text text-5xl tracking-tighter  ">
                 Solace Notes
             </h1>
             {needNotes && (
-                <div className="-mt-14">
+                <div className="-mt-50">
                     <Spinner />
                 </div>
             )}
-            {!needNotes && userNotes && (
+            {!needNotes && !working && (
                 <>
                     <div className="relative h-2">
                         <div className="float-right mt-12 mr-18">

@@ -11,9 +11,15 @@ export default function Home() {
 
     return (
         <>
-            <Link href="" className="absolute top-4 right-12">
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/mattbieber/solacenotes"
+                className="absolute top-4 right-12"
+            >
                 <GitHubIcon />
-            </Link>
+            </a>
+
             <main className="flex min-h-screen flex-col items-center p-4">
                 <h1 className="text-6xl mt-40 mb-16 font-black tracking-tight">
                     ✨ Solace Notes ✨
@@ -40,7 +46,7 @@ export default function Home() {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://github.com/mattbieber/solace-notes"
+                        href="https://github.com/mattbieber/solacenotes"
                         className="flex space-x-1 mt-12 mb-12 text-l  hover:text-indigo-300"
                     >
                         <span>Visit the repo</span>
@@ -51,7 +57,7 @@ export default function Home() {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href=""
+                        href="https://github.com/mattbieber/solacenotes/blob/master/README.md"
                         className="flex space-x-1 mt-12 mb-12 text-l  hover:text-indigo-300"
                     >
                         <span>View the docs</span>
