@@ -8,9 +8,9 @@ export function useOutsideClickObserver(ref: React.RefObject<HTMLDivElement>) {
     const onDocumentClick = (event: MouseEvent) => {
       event.preventDefault()
       assertIsTypeNode(event.target)
-      if (ref.current && !ref.current.contains(event.target)) {
-        
-      }
+    //   if (ref.current && !ref.current.contains(event.target)) {
+          
+    //   }
       
     }
 

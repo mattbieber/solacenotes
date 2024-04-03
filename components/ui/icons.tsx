@@ -410,7 +410,7 @@ export const ToolbarIcons = {
     ColorIcon: ({
         sz = defaultSize,
         viewBox = `0 0 ${defaultSize} ${defaultSize}`,
-        on = false,
+        
     }: SVGCustomProps): SVG => {
         return (
             <svg

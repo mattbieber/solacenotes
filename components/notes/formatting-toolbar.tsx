@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import type { Editor } from '@tiptap/react'
-import { ColorPicker } from '../ColorPicker'
 import { ToolbarIcons } from '../ui/icons'
 
 interface RichTextFormattingToolbarProps {
@@ -12,16 +11,16 @@ interface RichTextFormattingToolbarProps {
 export function RichTextFormattingToolbar({
     editor,
 }: RichTextFormattingToolbarProps) {
-    const [showColorPicker, setShowColorPicker] = useState(false)
+    // const [showColorPicker, setShowColorPicker] = useState(false)
     // const [color, setColor] = useState<string>('')
 
     if (!editor) {
         return null
     }
 
-    const colorPickerStyle = showColorPicker
-        ? 'opacity-100 visible absolute w-48 mt-2 bg-white text-gray-800 border border-gray-300'
-        : 'opacity-0 invisible absolute'
+    // const colorPickerStyle = showColorPicker
+    //     ? 'opacity-100 visible absolute w-48 mt-2 bg-white text-gray-800 border border-gray-300'
+    //     : 'opacity-0 invisible absolute'
 
     return (
         <section className="border bg-background rounded-sm border-input p-2 flex space-x-4">
@@ -131,21 +130,12 @@ export function RichTextFormattingToolbar({
                     on={editor.isActive('blockquote')}
                 />
             </button>
-            {/* <Toggle
-        size="sm"
-        // pressed={editor.isActive('heading')}
-        onPressedChange={
-          () => setShowColorPicker(!showColorPicker)
-          // editor.chain().focus().toggleHeading({ level: 2 }).run()
-        }
-      >
-        <ToolbarIcons.ColorIcon className="h-4 w-4" />
-      </Toggle> */}
-            <div className="relative group inline-block z-50">
+        
+            {/* <div className="relative group inline-block z-50">
                 <div className={colorPickerStyle}>
                     {showColorPicker && <ColorPicker />}
                 </div>
-            </div>
+            </div> */}
         </section>
     )
 }

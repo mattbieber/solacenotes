@@ -17,7 +17,7 @@ export async function saveNote(note: Note): Promise<SaveDeleteResult> {
     }
 
     try {
-        const result = await db.note.upsert({
+        void await db.note.upsert({
             where: { slug: note.slug },
             update: note,
             create: note,
@@ -37,7 +37,7 @@ export async function fetchNote(slug: string): Promise<Note | FetchFailure> {
 }
 
 export async function deleteNote(slug: string): Promise<SaveDeleteResult> {
-    const result = await db.note.delete({
+    void await db.note.delete({
         where: { slug },
     })
     return 'failure'

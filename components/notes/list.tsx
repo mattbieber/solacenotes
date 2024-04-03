@@ -57,7 +57,7 @@ export const NoteList = ({ notes, deleteClickHandler }: NoteListProps) => {
                         >
                             <button
                                 className="rounded transition duration-500 ease-in-out hover:ring-2 hover:ring-indigo-200"
-                                onClick={(_ => deleteClickHandler(note.slug))}
+                                onClick={(() => deleteClickHandler(note.slug))}
                                 type="button"
                             >
                                 <TrashIcon />

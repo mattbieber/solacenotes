@@ -163,8 +163,7 @@ export default function Edit({ params }: { params: { slug: string } }) {
                         <FormField
                             // control={noteForm.control}
                             name="content"
-                            render={({ field }) => {
-                                const { name } = field
+                            render={() => {
                                 return (
                                     <FormItem>
                                         <FormLabel className="text-lg">

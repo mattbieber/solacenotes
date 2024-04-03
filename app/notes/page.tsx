@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { CenteredItem, Spinner } from '@/components/ui'
-import { Arrow } from '@/components/ui/icons'
 import { fetchNotes } from './actions/fetch-notes-action'
 import { deleteNote } from './actions/note-action'
 import { NoteList } from '@/components/notes'
@@ -33,7 +32,7 @@ export default function DashboardPage() {
 
     const handleDeleteClick = (slug: string) => {
         const doDelete = async () => {
-            const result = await deleteNote(slug)
+            void await deleteNote(slug)
             setNeedNotes(true)
             setIsWorking(true)
         }
