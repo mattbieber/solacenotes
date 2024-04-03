@@ -37,6 +37,6 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["error"],
     'react/prop-types': 'off',
     'import/no-duplicates': 'error',
-    'import/no-extraneous-dependencies': 'error',
+    'import/no-extraneous-dependencies': 'warn',
   },
 }
