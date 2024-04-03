@@ -1,0 +1,19 @@
+# generated files
+.github
+CHANGELOG.md
+
+# external dependencies
+node_modules
+
+# build output
+.next
+coverage
+dist
+
+# lockfiles
+package-lock.json
+pnpm-lock.yaml
+
+# local configs
+.vscode
+
