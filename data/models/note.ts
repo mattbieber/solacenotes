@@ -2,7 +2,7 @@ import * as z from 'zod'
 
 export const NoteSchema = z.object({
     id: z.number().int().optional(),
-    slug: z.string().uuid(),
+    slug: z.string(),
     userId: z.number().int(),
     createdAt: z.date(),
     updatedAt: z.date(),

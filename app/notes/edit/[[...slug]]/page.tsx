@@ -110,9 +110,13 @@ export default function Edit({ params }: { params: { slug: string } }) {
         if (currentNote) {
             const doSave = async () => {
                 const result = NoteSchema.safeParse(currentNote)
+                console.log(currentNote)
+                console.log(result)
                 if (result.success) {
                     void (await saveNote(currentNote))
                     router.push('/notes')
+                } else {
+                    throw new Error('Error in zod validation    ')
                 }
             }
             setIsWorking(true)
