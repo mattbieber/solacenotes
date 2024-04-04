@@ -55,7 +55,7 @@ export const NavBar = () => {
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://github.com/mattbieber/solace-notes"
+                                href="https://github.com/mattbieber/solacenotes"
                                 className="flex space-x-1 mt-12 mb-12 text-l  hover:text-indigo-300"
                             >
                                 <HelpIcon />
